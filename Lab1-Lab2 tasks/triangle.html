@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triangle</title>
+    <style>
+        #math {
+            color: red;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas width="600" height="350" id="can"></canvas>
+    <h2>Accroding to pythagros theorem</h2>
+    <math id="math">
+        <mrow>
+            <mi>c</mi>
+            <mo>=</mo>
+            <msqrt>
+                <msup>
+                    <mi>a</mi>
+                    <mn>2</mn>
+                </msup>
+                <mo>+</mo>
+                <msup>
+                    <mi>b</mi>
+                    <mn>2</mn>
+                </msup>
+            </msqrt>
+        </mrow>
+
+    </math>
+    <script>
+        var canvasElement = document.querySelector("#can");
+        var context = canvasElement.getContext("2d");
+        context.beginPath();
+        context.font = "20px Arial";
+        context.fillText("b", 320, 200);
+        context.fillText("a", 250, 330);
+        context.fillText("c", 220, 200);
+
+        context.lineTo(300, 100);
+        context.lineTo(200, 300);
+        context.lineTo(300, 300);
+
+
+        context.closePath();
+
+        // the outline
+        context.lineWidth = 10;
+        context.strokeStyle = 'red';
+        context.stroke();
+
+        // the fill color
+        context.fillStyle = "red";
+        context.fill();
+
+    </script>
+</body>
+
+</html>

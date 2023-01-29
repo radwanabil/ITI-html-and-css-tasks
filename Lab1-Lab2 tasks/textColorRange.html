@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text color changer</title>
+    <style>
+        span {
+            font-size: 20px;
+            padding: 30px;
+            margin-top: 40px;
+            margin-left: 30px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <span>Red</span>
+    <input type="range" min="0" max="255" value="0" step="1" id="red" onmousemove="RedFunc(this.value)"></range>
+    <br> <br>
+    <span>Green</span>
+    <input type="range" min="0" max="255" value="0" step="1" id="green" onmousemove="GreenFunc(this.value)"></range>
+    <br><br>
+    <span>Blue</span>
+    <input type="range" min="0" max="255" value="0" step="1" id="blue" onmousemove="BlueFunc(this.value)"></range>
+    <h2 id="txt">Change the 3 color ranges above and observe my color change</h2>
+    <script>
+        var redRange = document.getElementById("red");
+        var blueRange = document.getElementById("blue");
+        var greenRange = document.getElementById("green");
+
+
+        function RedFunc(value) {
+            redRange = value;
+            changeTxtColor();
+        }
+        function BlueFunc(value) {
+            blueRange = value;
+            changeTxtColor();
+        }
+        function GreenFunc(value) {
+            greenRange = value;
+            changeTxtColor();
+        }
+        function changeTxtColor() {
+
+            document.getElementById("txt").style.color = "rgb(" + redRange + "," + greenRange + "," + blueRange + ")";
+        }
+    </script>
+</body>
+
+</html>

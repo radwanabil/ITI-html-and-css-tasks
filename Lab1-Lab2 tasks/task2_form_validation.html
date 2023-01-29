@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web form validation</title>
+    <style>
+        #name:valid+label {
+            display: none;
+            border-color: green;
+        }
+
+        #email:valid+label {
+
+            display: none;
+            border-color: green;
+        }
+
+        input {
+            display: block;
+        }
+
+        #name:invalid {
+            border-color: red;
+        }
+
+        #email:invalid {
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Change email address</h1>
+    <form action="">
+
+        <input type="text" pattern="[A-Za-z ]{1,}" required name="name" id="name" placeholder="Username" />
+
+        <label id="nameLabel">The required username may only be a series of alphatical characters.</label>
+        <br>
+        <input type="email" required email="email" placeholder="Email" id="email" />
+        <label id="emailLabel">The required email address may not include any special characters other than '@'
+            sign.</label><br>
+        <input type="submit" value="Change">
+    </form>
+
+</body>
+
+</html>
