@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <style>
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(255, 255, 255);
+
+            padding-right: 5px;
+        }
+
+        #name {
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+
+        }
+
+        #email {
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+        }
+
+        body {
+            background: rgb(0, 0, 0, 0.1);
+            background-image: url(back2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        div {
+            margin: 140px auto;
+            height: 200px;
+            width: 500px;
+            border: 1px solid black;
+            padding: 10px;
+            background: rgba(217, 201, 212, 0.1);
+            border-radius: 10px;
+            background: rgba(217, 201, 212, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Welcome</h1>
+        <span id="name">" ,"</span>
+        <span id="email"></span>
+    </div>
+    <script>
+        var name = localStorage.getItem("username");
+        var email = localStorage.getItem("email");
+        var showname = document.getElementById("name");
+        var showEmail = document.getElementById("email");
+        showname.innerHTML = name + " , ";
+        showEmail.innerHTML = "Your email is " + email;
+    </script>
+</body>
+
+</html>
